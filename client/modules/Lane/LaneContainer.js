@@ -4,13 +4,13 @@ import * as laneActions from './LaneActions';
 import { createNote } from '../Note/NoteActions';
 
 const mapStateToProps = (state) => {
-        laneNotes: ownProps.lane.notes.map(noteId => state.notes.find(note => note.id === noteId))
-  };
+    laneNotes: ownProps.lane.notes.map(noteId => state.notes.find(note => note.id === noteId))
+};
 
-const mapDispatchToProps = (dispatch) => {
-      ...laneActions,
+const mapDispatchToProps = (dispatch) => ({
+  ...laneActions,
   addNote: createNote,
-  };
+});
 
     
 export default connect(
