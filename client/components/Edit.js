@@ -32,23 +32,24 @@ renderValue = () => {
 }
 
   renderEdit = () => {
-         return (
-     <input
-       type="text"
-       autoFocus
-       defaultValue={this.props.value}
-       onBlur={this.finishEdit}
+    return (
+      <input
+        type="text"
+        autoFocus
+        defaultValue={this.props.value}
+        onBlur={this.finishEdit}
        onKeyPress={this.checkEnter}
-     />
+      />
    );
- }
+  }
 
   render() {
-        return (
-    <div className={this.props.className}>
-      {this.props.editing ? this.renderEdit() : this.renderValue()}
-    </div>
-  };
+    return (
+      <div className={this.props.className}>
+        {this.props.editing ? this.renderEdit() : this.renderValue()}
+      </div>
+    );
+  }
 }
 
 Edit.propTypes = {

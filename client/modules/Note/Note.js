@@ -8,6 +8,7 @@ import styles from './Note.css';
 class Note extends Component {
   render() {
     return (
+        <div />
     );
   }
 }
